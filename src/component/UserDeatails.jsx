@@ -1,6 +1,10 @@
 import DeleteAllUser from "./DeleteAllUser"
 
 const UserDeatails = () => {
+
+  const addNewUser = ()=>{
+    
+  }
   return (
     <div className="m-2 p-2 border h-auto">
         <h2>List of Book Names</h2>
@@ -10,7 +14,7 @@ const UserDeatails = () => {
         </div>
         <ul>
             <input className="w-1/3  m-2 p-2" placeholder="enter book name"></input>
-            <button className="bg-blue-600 hover:bg-blue-400 m-2 p-2 border border-black rounded-lg text-white" >Add new book</button>
+            <button className="bg-blue-600 hover:bg-blue-400 m-2 p-2 border border-black rounded-lg text-white" onClick={()=>addNewUser()}>Add new book</button>
         
 
 
