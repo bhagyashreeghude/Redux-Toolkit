@@ -13,19 +13,19 @@ const UserDeatails = () => {
   };
 
   return (
-    <div className="m-2 p-2 border ">
-      <h2>List of Book Names</h2>
+    <div className="m-2 p-2 border  ">
+      <h2 className="lg:text-3xl font-bold ">List of Candidate Name</h2>
 
       <ul className="p-2 m-2 underline-offset-4">
-        <input
+        {/* <input
           className="w-1/3  m-2 p-2 border"
           placeholder="enter book name"
-        ></input>
+        ></input> */}
         <button
-          className="bg-blue-600 hover:bg-blue-400 m-2 p-2 border border-black rounded-lg text-white"
+          className="bg-blue-600 hover:bg-blue-400 m-1 p-1 ml-0 lg:m-2 lg:p-2 border border-black rounded-lg text-white"
           onClick={() => addNewUser(fakeUserData())}
         >
-          Add new book
+          Add new candidate name
         </button>
 
         <DisplayUsers />

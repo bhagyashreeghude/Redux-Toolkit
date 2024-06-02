@@ -1,32 +1,31 @@
-import { createSlice} from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit";
 
 const userSlice = createSlice({
-    name:"user",
-    initialState:[
+  name: "user",
+  initialState: [],
+  reducers: {
+    addUser(state, action) {
+      state.push(action.payload);
+    },
+    displayGender(state, action) {
+      state.push(action.payload);
+    },
+    removeUser(state, action) {
+      state.splice(action.payload, 1);
+    },
+    deleteUsers(state, action) {
+      return [];
+      // console.log("hi del")
+    },
+  },
 
-    ],
-    reducers:{
-        addUser(state,action){
-            state.push(action.payload)
-
-        },
-        displayGender(state,action){
-            state.push(action.payload)
-
-        },
-        removeUser(state,action){
-            state.splice(action.payload,1)
-
-        },
-        deleteUsers(state,action){
-            return  [];
-            // console.log("hi del")
-            
-        }
-    }
-})
-console.log(userSlice.actions)
+  extraReducers(builder) {
+    builder.addCase(userSlice.actions.deleteUsers, () => {
+      return [];
+    });
+  },
+});
+// console.log(userSlice.actions)
 
 export default userSlice.reducer;
-export const {addUser,removeUser,deleteUsers} =userSlice.actions;
-
+export const { addUser, removeUser, deleteUsers } = userSlice.actions;

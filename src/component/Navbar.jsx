@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <>
-      <div className="bg-gray-600 p-2 m-2">
+      <div className="bg-gray-600 p-2 m-2 w-full">
         <h1 className="text-white text-5xl">Welcome ! to Book store</h1>
 
         <div className="border text-white m-4 p-2 text-3xl">

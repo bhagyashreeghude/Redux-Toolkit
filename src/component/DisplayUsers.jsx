@@ -15,13 +15,13 @@ const DisplayUsers = () => {
   }
 
   return (
-    <ul>
+    <ul className="lg:text-2xl w-full">
       {data.map((user, id) => (
         <li key={id}>
           {user}
-          <button className="pl-10 "onClick={()=>{deleteUser(id)}}>
+          <button className="ml-16"onClick={()=>{deleteUser(id)}}>
            
-            <MdDelete className="h-8" size={20} ></MdDelete>
+            <MdDelete className="h-10" size={26} ></MdDelete>
           </button>
         </li>
       ))}
