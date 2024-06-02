@@ -1,28 +1,26 @@
-import { fakeUserData, fakeUserDataGender } from "../api/api";
+import { fakeUserData } from "../api/api";
 import DeleteAllUser from "./DeleteAllUser";
 import { useDispatch } from "react-redux";
 import { addUser } from "./store/userSlice";
+import DisplayUsers from "./DisplayUsers";
 
 const UserDeatails = () => {
-
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const addNewUser = (name) => {
-    console.log(name)
-    dispatch(addUser(name))
-  };
-
-  const displayGeneder = (gender) => {
-    console.log(gender)
-    dispatch(addUser(gender))
+    console.log(name);
+    dispatch(addUser(name));
   };
 
   return (
-    <div className="m-2 p-2 border h-auto">
+    <div className="m-2 p-2 border ">
       <h2>List of Book Names</h2>
-      <div></div>
-      <ul>
-        <input className="w-1/3  m-2 p-2" placeholder="enter book name"></input>
+
+      <ul className="p-2 m-2 underline-offset-4">
+        <input
+          className="w-1/3  m-2 p-2 border"
+          placeholder="enter book name"
+        ></input>
         <button
           className="bg-blue-600 hover:bg-blue-400 m-2 p-2 border border-black rounded-lg text-white"
           onClick={() => addNewUser(fakeUserData())}
@@ -30,18 +28,10 @@ const UserDeatails = () => {
           Add new book
         </button>
 
-        <button
-          className="bg-blue-600 hover:bg-blue-400 m-2 p-2 border border-black rounded-lg text-white"
-          onClick={() => displayGeneder(fakeUserDataGender())}
-        >
-          Gender
-        </button>
-        {}
+        <DisplayUsers />
 
-        <button className="bg-red-600 hover:bg-red-400 m-2 p-2 border border-black rounded-lg text-white">
-          Remove new book
-        </button>
         <hr></hr>
+        <br></br>
         <DeleteAllUser />
       </ul>
     </div>
